@@ -40,8 +40,8 @@ dev = [
 euchre-play = "cogame_euchre.cli:cli"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/cogame-euchre"
-Repository = "https://github.com/Metta-AI/cogame-euchre"
+Homepage = "https://github.com/softmax-universe/coworld-euchre"
+Repository = "https://github.com/softmax-universe/coworld-euchre"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/cogame_euchre"]

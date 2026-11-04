@@ -31,19 +31,19 @@ jobs:
           - name: default
             commissioner_key: config_driven
             ruleset_strategy_config_name: default
-            image: ghcr.io/metta-ai/commissioners-default
+            image: ghcr.io/softmax-universe/commissioners-default
           - name: among-them-commissioner
             commissioner_key: config_driven
             ruleset_strategy_config_name: among_them
-            image: ghcr.io/metta-ai/commissioners-among-them-commissioner
+            image: ghcr.io/softmax-universe/commissioners-among-them-commissioner
           - name: cue-n-woo-commissioner
             commissioner_key: config_driven
             ruleset_strategy_config_name: cue_n_woo
-            image: ghcr.io/metta-ai/commissioners-cue-n-woo
+            image: ghcr.io/softmax-universe/commissioners-cue-n-woo
           - name: proxywar-commissioner
             commissioner_key: config_driven
             ruleset_strategy_config_name: proxywar
-            image: ghcr.io/metta-ai/commissioners-proxywar
+            image: ghcr.io/softmax-universe/commissioners-proxywar
     steps:
       - uses: actions/checkout@v4
 

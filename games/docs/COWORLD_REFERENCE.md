@@ -6,7 +6,7 @@
 
 ## 1. What this project is
 
-`games` is the consolidated home for Metta-AI game definitions and runtime packages. The repo
+`games` is the consolidated home for softmax-universe game definitions and runtime packages. The repo
 contains imported game packages under `games/<name>/`, reusable authoring templates under
 `templates/`, and shared migration notes under `docs/`.
 
@@ -106,7 +106,7 @@ For the complete list, use [`docs/inventory.md`](inventory.md).
 
 1. **Do not mutate source repos from here.** Imported repositories stay untouched until humans
    decide retirement or mirroring policy.
-2. **Game code is not player code.** Policies belong in `Metta-AI/players` unless they are a small
+2. **Game code is not player code.** Policies belong in `softmax-universe/players` unless they are a small
    game-owned fixture or bundled reference player.
 3. **Container-first Coworld games are not Python workspace members by default.** Keep their local
    toolchains inside the game directory.

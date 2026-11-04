@@ -1,7 +1,7 @@
 # bombercog
 
 Bomberman-style multi-agent deathmatch for the
-[MettaGrid](https://github.com/metta-ai/metta/tree/main/packages/mettagrid)
+[MettaGrid](https://github.com/softmax-universe/softmax/tree/main/packages/mettagrid)
 environment.
 
 Agents switch into a `bomb` vibe, drop a bomb by moving into an empty cell, and

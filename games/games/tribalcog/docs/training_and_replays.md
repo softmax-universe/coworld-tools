@@ -14,7 +14,7 @@ CLI (training subcommand, requires the `cogames` extra):
 - `pip install -e .[cogames]`
 - `tribalcog train --steps 1000000 --parallel-envs 8 --num-workers 4 --log-outputs`
 
-Root `Metta-AI/games` workspace:
+Root `softmax-universe/games` workspace:
 - `uv run --package tribalcog --extra cogames tribalcog train --steps 1000000 --parallel-envs 8 --num-workers 4 --log-outputs`
 
 CoGames CLI (optional):
@@ -37,7 +37,7 @@ Key files:
   (`tribal_village_env/libtribal_village.*`).
 - If training from a Metta checkout, avoid older copies of `tribalcog` to
   prevent conflicts in import resolution. The intended optional-package source
-  for new Metta/CoGames metadata is `https://github.com/Metta-AI/games.git`
+  for new Metta/CoGames metadata is `https://github.com/softmax-universe/games.git`
   with subdirectory `games/tribalcog`.
 - PufferLib vs pufferlib-core mismatches have caused issues in past sessions;
   prefer the versions pinned in the workspace you are running.

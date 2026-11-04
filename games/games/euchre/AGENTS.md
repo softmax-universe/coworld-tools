@@ -6,7 +6,7 @@ Guidance for AI assistants (Claude Code, Codex) working inside `cogame-euchre`.
 
 A standalone game implementation of
 **Euchre** (4-player trick-taking card game) built on the
-[MettaGrid](https://github.com/Metta-AI/mettagrid) engine. All mechanics are
+[MettaGrid](https://github.com/softmax-universe/mettagrid) engine. All mechanics are
 expressed as declarative mettagrid config — handlers, events, mutations,
 filters. No Python wrapper or controller runs during simulation.
 

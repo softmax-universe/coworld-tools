@@ -128,11 +128,11 @@
     "protocols": {
       "player": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/games/blob/main/games/tribalcog/tribal_village_env/coworld/docs/player_protocol_spec.md"
+        "value": "https://github.com/softmax-universe/games/blob/main/games/tribalcog/tribal_village_env/coworld/docs/player_protocol_spec.md"
       },
       "global": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/games/blob/main/games/tribalcog/tribal_village_env/coworld/docs/global_protocol_spec.md"
+        "value": "https://github.com/softmax-universe/games/blob/main/games/tribalcog/tribal_village_env/coworld/docs/global_protocol_spec.md"
       }
     },
     "docs": {
@@ -142,7 +142,7 @@
           "title": "rules.md",
           "content": {
             "type": "uri",
-            "value": "https://github.com/Metta-AI/games/blob/main/games/tribalcog/tribal_village_env/coworld/docs/rules.md"
+            "value": "https://github.com/softmax-universe/games/blob/main/games/tribalcog/tribal_village_env/coworld/docs/rules.md"
           }
         },
         {
@@ -150,7 +150,7 @@
           "title": "play_tribalcog.md",
           "content": {
             "type": "uri",
-            "value": "https://github.com/Metta-AI/games/blob/main/games/tribalcog/tribal_village_env/coworld/docs/play_tribalcog.md"
+            "value": "https://github.com/softmax-universe/games/blob/main/games/tribalcog/tribal_village_env/coworld/docs/play_tribalcog.md"
           }
         }
       ]
@@ -227,8 +227,8 @@
       "type": "reporter",
       "name": "Softmax Default Reporter",
       "description": "Softmax-published default reporter that writes a concise Markdown summary from Tribal Cog results. Tribal Cog has no game-specific reporter yet, so it references the default reporter.",
-      "source_url": "https://github.com/Metta-AI/coworld-tools/tree/main/reporters/reporters/default",
-      "image": "ghcr.io/metta-ai/reporters-default:latest"
+      "source_url": "https://github.com/softmax-universe/coworld-tools/tree/main/reporters/reporters/default",
+      "image": "ghcr.io/softmax-universe/reporters-default:latest"
     }
   ],
   "grader": [
@@ -237,8 +237,8 @@
       "name": "Tribal Cog Grader",
       "type": "grader",
       "description": "Reference Tribal Cog grader that scores team separation, decisive winners, episode length, and completion reason.",
-      "source_url": "https://github.com/Metta-AI/coworld-tools/tree/main/graders/graders/tribal_cog/tribal_cog_grader",
-      "image": "ghcr.io/metta-ai/graders-tribal-cog:latest"
+      "source_url": "https://github.com/softmax-universe/coworld-tools/tree/main/graders/graders/tribal_cog/tribal_cog_grader",
+      "image": "ghcr.io/softmax-universe/graders-tribal-cog:latest"
     }
   ]
 }

@@ -49,10 +49,10 @@ The standalone package name and recipe surface are both `hungercog`, even though
 
 ## Template Upstream
 
-This repo's history includes `Metta-AI/cogame` as a template parent. In a fresh clone, add the template remote before merging template updates:
+This repo's history includes `softmax-universe/cogame` as a template parent. In a fresh clone, add the template remote before merging template updates:
 
 ```bash
-git remote add upstream git@github.com:Metta-AI/cogame.git
+git remote add upstream git@github.com:softmax-universe/cogame.git
 git fetch upstream main
 git merge upstream/main
 ```

@@ -4,12 +4,12 @@ Date: 2026-05-22
 Owner: Docs / Game Integration
 Status: Active
 
-This page explains how Tribal Cog fits the current `Metta-AI/games`, CoGames,
+This page explains how Tribal Cog fits the current `softmax-universe/games`, CoGames,
 Metta recipe, and Coworld conventions.
 
 ## Source of Truth
 
-Tribal Cog lives in `Metta-AI/games` under `games/tribalcog`.
+Tribal Cog lives in `softmax-universe/games` under `games/tribalcog`.
 
 The standalone package shape is intentional:
 
@@ -20,7 +20,7 @@ The standalone package shape is intentional:
 - The Metta recipe bridge is `tribal_village_env.recipe`.
 
 Do not reshape Tribal Cog into a role-repo scaffold. General player policies
-belong in `Metta-AI/players`; game runtime code belongs here.
+belong in `softmax-universe/players`; game runtime code belongs here.
 
 ## Local Run Surfaces
 
@@ -32,7 +32,7 @@ tribalcog play
 tribalcog play --render ansi --steps 128
 ```
 
-From the root `Metta-AI/games` workspace:
+From the root `softmax-universe/games` workspace:
 
 ```bash
 uv run --package tribalcog tribalcog play --render ansi --steps 128
@@ -67,7 +67,7 @@ When updating Metta or CoGames optional package metadata, point Tribal Cog at
 this repository:
 
 ```toml
-tribalcog = { git = "https://github.com/Metta-AI/games.git", subdirectory = "games/tribalcog" }
+tribalcog = { git = "https://github.com/softmax-universe/games.git", subdirectory = "games/tribalcog" }
 ```
 
 The import module for optional loading is:

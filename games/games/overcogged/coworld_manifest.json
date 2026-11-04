@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Metta-AI/metta/main/packages/coworld/src/coworld/coworld_manifest_schema.json",
+  "$schema": "https://raw.githubusercontent.com/softmax-universe/softmax/main/packages/coworld/src/coworld/coworld_manifest_schema.json",
   "game": {
     "name": "overcogged",
     "version": "0.1.0",
@@ -13,7 +13,7 @@
         "-m",
         "overcogged.coworld.server"
       ],
-      "source_url": "ssh://git@github.com/Metta-AI/coworld-overcogged.git"
+      "source_url": "ssh://git@github.com/softmax-universe/coworld-overcogged.git"
     },
     "config_schema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -98,11 +98,11 @@
     "protocols": {
       "player": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/coworld-overcogged/blob/main/src/overcogged/coworld/docs/player_protocol_spec.md"
+        "value": "https://github.com/softmax-universe/coworld-overcogged/blob/main/src/overcogged/coworld/docs/player_protocol_spec.md"
       },
       "global": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/coworld-overcogged/blob/main/src/overcogged/coworld/docs/global_protocol_spec.md"
+        "value": "https://github.com/softmax-universe/coworld-overcogged/blob/main/src/overcogged/coworld/docs/global_protocol_spec.md"
       }
     },
     "docs": {
@@ -112,7 +112,7 @@
           "title": "rules.md",
           "content": {
             "type": "uri",
-            "value": "https://github.com/Metta-AI/coworld-overcogged/blob/main/src/overcogged/coworld/docs/rules.md"
+            "value": "https://github.com/softmax-universe/coworld-overcogged/blob/main/src/overcogged/coworld/docs/rules.md"
           }
         },
         {
@@ -120,7 +120,7 @@
           "title": "play_overcogged.md",
           "content": {
             "type": "uri",
-            "value": "https://github.com/Metta-AI/coworld-overcogged/blob/main/src/overcogged/coworld/docs/play_overcogged.md"
+            "value": "https://github.com/softmax-universe/coworld-overcogged/blob/main/src/overcogged/coworld/docs/play_overcogged.md"
           }
         }
       ]
@@ -137,7 +137,7 @@
         "/app/player.py"
       ],
       "description": "Bundled reference player for overcogged that sends legal actions over the Coworld player websocket.",
-      "source_url": "ssh://git@github.com/Metta-AI/coworld-overcogged.git"
+      "source_url": "ssh://git@github.com/softmax-universe/coworld-overcogged.git"
     }
   ],
   "reporter": [
@@ -146,8 +146,8 @@
       "type": "reporter",
       "name": "Softmax Default Reporter",
       "description": "Default reporter for overcogged results.",
-      "source_url": "https://github.com/Metta-AI/coworld-tools/tree/main/reporters/reporters/default",
-      "image": "ghcr.io/metta-ai/reporters-default:latest"
+      "source_url": "https://github.com/softmax-universe/coworld-tools/tree/main/reporters/reporters/default",
+      "image": "ghcr.io/softmax-universe/reporters-default:latest"
     }
   ],
   "grader": [
@@ -156,8 +156,8 @@
       "name": "MettaGrid Score Grader",
       "type": "grader",
       "description": "Generic MettaGrid grader that scores simple score-and-steps results from spread, margin, magnitude, and episode length.",
-      "source_url": "https://github.com/Metta-AI/coworld-tools/tree/main/graders/graders/mettagrid/mettagrid_score_grader",
-      "image": "ghcr.io/metta-ai/graders-mettagrid-score:latest"
+      "source_url": "https://github.com/softmax-universe/coworld-tools/tree/main/graders/graders/mettagrid/mettagrid_score_grader",
+      "image": "ghcr.io/softmax-universe/graders-mettagrid-score:latest"
     }
   ],
   "variants": [

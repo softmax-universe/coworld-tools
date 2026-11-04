@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
-METTA_REPO_URL="${METTA_REPO_URL:-https://github.com/Metta-AI/metta.git}"
+METTA_REPO_URL="${METTA_REPO_URL:-https://github.com/softmax-universe/softmax.git}"
 METTA_REF="${METTA_REF:-main}"
 METTA_CLONE_PARENT="${METTA_CLONE_PARENT:-$REPO_ROOT/.branch-installs}"
 VENV_DIR="${VENV_DIR:-$REPO_ROOT/.venv}"

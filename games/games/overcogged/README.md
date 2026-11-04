@@ -11,7 +11,7 @@ This repo carries the game-specific code that used to live under the Metta monor
 It depends on the shared `mettagrid` package and integrates with `cogames` through optional install paths instead of
 vendoring the whole Metta stack.
 
-This repository is based on the [`Metta-AI/cogame`](https://github.com/Metta-AI/cogame) standalone game template. The
+This repository is based on the [`softmax-universe/cogame`](https://github.com/softmax-universe/cogame) standalone game template. The
 template docs and game-authoring skills live under [`docs/`](docs/) and [`skills/`](skills/) so future template updates
 can be merged into this repo.
 

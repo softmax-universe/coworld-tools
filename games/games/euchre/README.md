@@ -1,8 +1,8 @@
 # cogame-euchre
 
 **Euchre** — a 4-player trick-taking card game — built as a standalone
-[cogame](https://github.com/Metta-AI/cogame) on the
-[MettaGrid](https://github.com/Metta-AI/mettagrid) engine.
+[cogame](https://github.com/softmax-universe/cogame) on the
+[MettaGrid](https://github.com/softmax-universe/mettagrid) engine.
 
 All game logic is declarative mettagrid config (handlers, events, mutations,
 filters). No Python wrapper or controller runs during simulation — the rules
@@ -80,5 +80,5 @@ See [`AGENTS.md`](AGENTS.md) for the AI-agent entry point.
 
 ## Origin
 
-Ported from `claude/implement-euchre-game-LGCS6` in `metta-ai/metta` into a
-standalone cogame repository, using `metta-ai/cogame` as the template.
+Ported from `claude/implement-euchre-game-LGCS6` in `softmax-universe/softmax` into a
+standalone cogame repository, using `softmax-universe/cogame` as the template.

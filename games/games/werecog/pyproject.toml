@@ -29,8 +29,8 @@ dev = [
 werecog = "werecog.main:main"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/coworld-werecog"
-Repository = "https://github.com/Metta-AI/coworld-werecog.git"
+Homepage = "https://github.com/softmax-universe/coworld-werecog"
+Repository = "https://github.com/softmax-universe/coworld-werecog.git"
 
 [tool.setuptools.packages.find]
 where = ["src"]

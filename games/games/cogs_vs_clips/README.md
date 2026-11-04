@@ -8,8 +8,8 @@ player image runs a policy player that connects to the game's `/player` websocke
 From the repo root:
 
 ```bash
-docker build -f games/cogs_vs_clips/game/Dockerfile -t ghcr.io/metta-ai/coworld-cogs-vs-clips-game:latest .
-docker build -f games/cogs_vs_clips/player/Dockerfile -t ghcr.io/metta-ai/coworld-cogs-vs-clips-reference-player:latest .
+docker build -f games/cogs_vs_clips/game/Dockerfile -t ghcr.io/softmax-universe/coworld-cogs-vs-clips-game:latest .
+docker build -f games/cogs_vs_clips/player/Dockerfile -t ghcr.io/softmax-universe/coworld-cogs-vs-clips-reference-player:latest .
 ```
 
 ## Play Locally
@@ -38,7 +38,7 @@ uv run coworld certify games/cogs_vs_clips/coworld_manifest.json
 From the repo root, run the game with the bundled policy player image:
 
 ```bash
-uv run coworld run-episode games/cogs_vs_clips/coworld_manifest.json ghcr.io/metta-ai/coworld-cogs-vs-clips-reference-player:latest --run python --run /app/coworld_reference_player.py
+uv run coworld run-episode games/cogs_vs_clips/coworld_manifest.json ghcr.io/softmax-universe/coworld-cogs-vs-clips-reference-player:latest --run python --run /app/coworld_reference_player.py
 ```
 
 This is the same command shape a league player would use after building their own player image.

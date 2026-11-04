@@ -31,7 +31,7 @@ RUN if [ "$(dpkg --print-architecture)" = "amd64" ]; then \
 ENV PATH="/root/.nimby/nim/bin:$PATH"
 
 WORKDIR /workspace/crewrift
-RUN git clone https://github.com/Metta-AI/coworld-crewrift.git . \
+RUN git clone https://github.com/softmax-universe/coworld-crewrift.git . \
  && git checkout "$CREWRIFT_REF"
 
 RUN nimby --global sync nimby.lock

@@ -50,8 +50,8 @@ dev = [
 cogony = "cogony.cli:cli"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/cogony"
-Repository = "https://github.com/Metta-AI/cogony"
+Homepage = "https://github.com/softmax-universe/cogony"
+Repository = "https://github.com/softmax-universe/cogony"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/cogony"]

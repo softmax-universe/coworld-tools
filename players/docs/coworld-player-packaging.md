@@ -51,8 +51,8 @@ Out of scope (intentionally not produced by `build.sh`):
 ## 1. The Docker image contract (player runtime)
 
 All other surfaces sit on top of this. Sources:
-[`COWORLD_README.md`](https://github.com/Metta-AI/metta/blob/main/packages/coworld/src/coworld/COWORLD_README.md),
-[`GAME_RUNTIME_README.md`](https://github.com/Metta-AI/metta/blob/main/packages/coworld/src/coworld/GAME_RUNTIME_README.md),
+[`COWORLD_README.md`](https://github.com/softmax-universe/softmax/blob/main/packages/coworld/src/coworld/COWORLD_README.md),
+[`GAME_RUNTIME_README.md`](https://github.com/softmax-universe/softmax/blob/main/packages/coworld/src/coworld/GAME_RUNTIME_README.md),
 and `bitworld/among_them/players/how_to_submit_coworld_policy.md`.
 
 - **Platform**: `linux/amd64`. On Apple Silicon, build with
@@ -68,7 +68,7 @@ and `bitworld/among_them/players/how_to_submit_coworld_policy.md`.
     Use exactly as given; do not merge other query params, rewrite the host,
     or hardcode slots/tokens.
   - `COGAME_LOG_URI` — *contract: optional.* The
-    [`GAME_RUNTIME_README.md`](https://github.com/Metta-AI/metta/blob/main/packages/coworld/src/coworld/GAME_RUNTIME_README.md)
+    [`GAME_RUNTIME_README.md`](https://github.com/softmax-universe/softmax/blob/main/packages/coworld/src/coworld/GAME_RUNTIME_README.md)
     contract says a player may receive this; the documented behavior is
     that the player POSTs plain-text log lines (one or more
     newline-separated lines per request) to it. **As of 2026-05-19,
@@ -107,7 +107,7 @@ the URI in its `game.protocols.player`. Currently relevant to this repo:
 
 | Game | Protocol | Wire format |
 |---|---|---|
-| Among Them | [bitscreen_v1](https://github.com/Metta-AI/bitworld/blob/master/docs/bitscreen_v1.md) | Binary. Server → client: 8192-byte frame (128×128 4-bit packed pixels). Client → server: 2-byte button packet `[0x00, mask]` (Up=1, Down=2, Left=4, Right=8, Select=16, A=32, B=64) or chat packet `[0x01] + ascii_bytes`. |
+| Among Them | [bitscreen_v1](https://github.com/softmax-universe/bitworld/blob/master/docs/bitscreen_v1.md) | Binary. Server → client: 8192-byte frame (128×128 4-bit packed pixels). Client → server: 2-byte button packet `[0x00, mask]` (Up=1, Down=2, Left=4, Right=8, Select=16, A=32, B=64) or chat packet `[0x01] + ascii_bytes`. |
 | Cogs vs Clips | coworld.player.v1 | JSON. First server message is `{"type":"player_config","protocol":"coworld.player.v1",...}`. Subsequent server messages are `{"type":"observation",...}` with mettagrid observation tokens. Player replies with `{"type":"action","action_index":N}` or `{"type":"action","action_name":"..."}`. Server sends `{"type":"final"}` and closes when done. |
 | Paint Arena | custom JSON | `{"type":"observation","positions":[...],"width","height"}` in; `{"move":"left|right|up|down"}` out. |
 
@@ -250,7 +250,7 @@ including a `coplayer_manifest.json`:
 {
   "author": "treeform@softmax.com",
   "name": "amongthemstarter",
-  "image_uri": "ghcr.io/metta-ai/amongthemstarter:latest",
+  "image_uri": "ghcr.io/softmax-universe/amongthemstarter:latest",
   "games": ["among_them"]
 }
 ```

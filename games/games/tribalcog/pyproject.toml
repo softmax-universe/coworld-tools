@@ -30,8 +30,8 @@ tribalcog = "tribal_village_env.cli:app"
 include-package-data = true
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/games/tree/main/games/tribalcog"
-Repository = "https://github.com/Metta-AI/games.git"
+Homepage = "https://github.com/softmax-universe/games/tree/main/games/tribalcog"
+Repository = "https://github.com/softmax-universe/games.git"
 
 [project.optional-dependencies]
 cogames = [

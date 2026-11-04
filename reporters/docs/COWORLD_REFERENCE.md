@@ -16,7 +16,7 @@
 
 ## 1. What this project is
 
-`reporters` is one of six per-role repositories that hold canonical and community implementations of Coworld supporting roles. The six are `Metta-AI/players`, `Metta-AI/commissioners`, `Metta-AI/reporters` (this repo), `Metta-AI/graders`, `Metta-AI/diagnosers`, and `Metta-AI/optimizers`. Each repo is the canonical home for implementations of its role: shared canonical implementations, a per-role `CATALOG.yaml`, a contributor `users/<handle>/` subtree, and optional role-specific tools. See [`docs/specs/0045-coworld-role-repos.md`](../../metta/docs/specs/0045-coworld-role-repos.md) for the per-repo structure.
+`reporters` is one of six per-role repositories that hold canonical and community implementations of Coworld supporting roles. The six are `softmax-universe/players`, `softmax-universe/commissioners`, `softmax-universe/reporters` (this repo), `softmax-universe/graders`, `softmax-universe/diagnosers`, and `softmax-universe/optimizers`. Each repo is the canonical home for implementations of its role: shared canonical implementations, a per-role `CATALOG.yaml`, a contributor `users/<handle>/` subtree, and optional role-specific tools. See [`docs/specs/0045-coworld-role-repos.md`](../../metta/docs/specs/0045-coworld-role-repos.md) for the per-repo structure.
 
 This repo holds **reporter** implementations. A reporter is a Coworld supporting runnable that turns one episode's artifacts into rendered highlights (Markdown or HTML) and a structured event log (Parquet). Reporters are on-demand: triggered by a CLI command, a hosted button, or an automatic pipeline — **not** automatically by the episode runner.
 
@@ -311,7 +311,7 @@ coworld hosted-game create / join
 Per [`docs/specs/0045-coworld-role-repos.md`](../../metta/docs/specs/0045-coworld-role-repos.md), every role repo (including this one) follows a consistent layout:
 
 ```text
-Metta-AI/<role>s/
+softmax-universe/<role>s/
   README.md
   CATALOG.yaml                # canonical list of implementations in this repo
   <role>s/                    # shared canonical implementations
@@ -353,7 +353,7 @@ The contributor experiment subtree. Researchers and external collaborators can d
 
 ### `tools/`
 
-Optional, role-specific. For reporters, this might house repro/replay harnesses, fixtures, or benchmark scripts. Cross-role utilities live in `Metta-AI/coworld` or `Metta-AI/metta`, not here.
+Optional, role-specific. For reporters, this might house repro/replay harnesses, fixtures, or benchmark scripts. Cross-role utilities live in `softmax-universe/coworld` or `softmax-universe/softmax`, not here.
 
 ---
 
@@ -405,7 +405,7 @@ How reporter outputs reach Observatory surfaces (which API endpoints, which UI p
 - **Reporter** — the role this repo holds implementations for. On-demand container that reads `COGAME_EPISODE_BUNDLE_URI` (a zip) and writes `COGAME_REPORT_URI` (a zip with `manifest.json` flagging `render` and `event_log`). [`docs/roles/reporter.md`](../../metta/packages/coworld/src/coworld/docs/roles/reporter.md), [`REPORTER_DESIGN.md`](./REPORTER_DESIGN.md).
 - **Grader** — emits a scalar score for how interesting/useful an episode was. Reads bundle, writes JSON with `{score, grader_id}` to `COGAME_GRADE_URI`. Status: reserved. [`docs/roles/grader.md`](../../metta/packages/coworld/src/coworld/docs/roles/grader.md).
 - **Diagnoser** — evaluates a target policy against an episode. Reads bundle plus `COGAME_TARGET_POLICY_URI`, writes zip to `COGAME_DIAGNOSIS_URI`. Status: reserved (highly tentative). [`docs/roles/diagnoser.md`](../../metta/packages/coworld/src/coworld/docs/roles/diagnoser.md).
-- **Optimizer** — long-running workbench for iterating on policies. Side effects (policy workspaces, candidate versions, evaluations) rather than a single output file. Canonical implementation: [`Metta-AI/optimizers`](https://github.com/Metta-AI/optimizers). Status: reserved. [`docs/roles/optimizer.md`](../../metta/packages/coworld/src/coworld/docs/roles/optimizer.md).
+- **Optimizer** — long-running workbench for iterating on policies. Side effects (policy workspaces, candidate versions, evaluations) rather than a single output file. Canonical implementation: [`softmax-universe/optimizers`](https://github.com/softmax-universe/optimizers). Status: reserved. [`docs/roles/optimizer.md`](../../metta/packages/coworld/src/coworld/docs/roles/optimizer.md).
 - **Commissioner** — round-orchestration role. Per-round WebSocket-served container that schedules episodes, collates results, decides division promotions. Status: contract defined, runtime pending. [`docs/roles/commissioner.md`](../../metta/packages/coworld/src/coworld/docs/roles/commissioner.md).
 - **League** — top-level tournament container. Holds divisions.
 - **Division** — competitive bracket within a league. Memberships graduate between divisions over time.
@@ -443,7 +443,7 @@ How reporter outputs reach Observatory surfaces (which API endpoints, which UI p
 | How do I read/write artifact URIs? | `packages/coworld/src/coworld/runner/io.py` (`read_data`, `post_data`, `upload_data`) |
 | What CLI commands exist? | [`CLI_README.md`](../../metta/packages/coworld/src/coworld/CLI_README.md) |
 | How do I get a bundle? | `coworld bundle <ereq_id>` (CLI), `coworld.bundle.build_episode_bundle` (library), `GET /v2/episodes/{ereq}/bundle` (API). |
-| What's the role-repo for my supporting role? | `Metta-AI/players` / `commissioners` / `reporters` / `graders` / `diagnosers` / `optimizers`. See spec 0045. |
+| What's the role-repo for my supporting role? | `softmax-universe/players` / `commissioners` / `reporters` / `graders` / `diagnosers` / `optimizers`. See spec 0045. |
 | Where do tournament results/replays end up? | metta `app_backend/` (Observatory backend); read models in `coworld/api_client.py`. |
 | Where's the daily report cron (not a Coworld reporter)? | metta `docs/specs/0038-daily-tournament-report.md` |
 | Where are RL training "reporters" (not Coworld reporters)? | metta `metta/rl/training/{gradient,microbench,stats}_reporter.py`, `tests/devops/runners/reporters/` |

@@ -40,11 +40,11 @@ dev = [
 memory-play = "cogame.cli:cli"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/cogame-memory"
-Repository = "https://github.com/Metta-AI/cogame-memory"
+Homepage = "https://github.com/softmax-universe/cogame-memory"
+Repository = "https://github.com/softmax-universe/cogame-memory"
 
 [tool.uv.sources]
-cogames = { git = "https://github.com/Metta-AI/metta.git", subdirectory = "packages/cogames" }
+cogames = { git = "https://github.com/softmax-universe/softmax.git", subdirectory = "packages/cogames" }
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/cogame"]

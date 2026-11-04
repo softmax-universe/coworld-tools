@@ -24,7 +24,7 @@ For local development against the matching Metta branch:
 ./install.sh
 ```
 
-By default this clones `Metta-AI/metta` at `main`, installs the `diplomacog` extra into a local virtualenv, then overlays this checkout without re-resolving dependencies. Override `METTA_REF` or `METTA_REPO_URL` only when testing another branch or fork.
+By default this clones `softmax-universe/softmax` at `main`, installs the `diplomacog` extra into a local virtualenv, then overlays this checkout without re-resolving dependencies. Override `METTA_REF` or `METTA_REPO_URL` only when testing another branch or fork.
 
 ## Quick Start
 
@@ -62,17 +62,17 @@ Run tests:
 
 ## Template Sync
 
-Diplomacog shares git history with [`Metta-AI/cogame`](https://github.com/Metta-AI/cogame), the standalone game template. This keeps shared docs, skills, and repo guidance mergeable from the template while Diplomacog owns its game code under `src/diplomacog`.
+Diplomacog shares git history with [`softmax-universe/cogame`](https://github.com/softmax-universe/cogame), the standalone game template. This keeps shared docs, skills, and repo guidance mergeable from the template while Diplomacog owns its game code under `src/diplomacog`.
 
 To pull future template updates into a local clone:
 
 ```bash
-git remote add cogame git@github.com:Metta-AI/cogame.git  # if missing
+git remote add cogame git@github.com:softmax-universe/cogame.git  # if missing
 git fetch cogame
 git merge cogame/main
 ```
 
-Resolve conflicts toward the Diplomacog package, assets, and tests. Do not push to `Metta-AI/cogame` from this repo.
+Resolve conflicts toward the Diplomacog package, assets, and tests. Do not push to `softmax-universe/cogame` from this repo.
 
 ## Assets
 

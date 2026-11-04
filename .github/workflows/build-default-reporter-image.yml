@@ -3,7 +3,7 @@ name: "Build Default Reporter Image"
 # Builds and publishes the Softmax default reporter image to GHCR.
 #
 # - On push to main with a relevant path change, the image is built and
-#   pushed to ghcr.io/metta-ai/reporters-default:latest plus an
+#   pushed to ghcr.io/softmax-universe/reporters-default:latest plus an
 #   immutable :main-<sha> tag.
 # - On pull requests, the image is built but not pushed.
 # - On workflow_dispatch, the latest commit on main is rebuilt
@@ -32,7 +32,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: metta-ai/reporters-default
+  IMAGE_NAME: softmax-universe/reporters-default
 
 jobs:
   build-and-push:

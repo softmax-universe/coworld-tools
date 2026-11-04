@@ -136,7 +136,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "mettagrid", git = "https://github.com/Metta-AI/mettagrid.git" },
+    { name = "mettagrid", git = "https://github.com/softmax-universe/mettagrid.git" },
     { name = "numpy", specifier = ">=1.26" },
     { name = "pydantic", specifier = ">=2" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8" },
@@ -276,7 +276,7 @@ wheels = [
 [[package]]
 name = "mettagrid"
 version = "0.0.0"
-source = { git = "https://github.com/Metta-AI/mettagrid.git#edb2fdf6c4c7525f2a03bb5e1b7e638f2681a85c" }
+source = { git = "https://github.com/softmax-universe/mettagrid.git#edb2fdf6c4c7525f2a03bb5e1b7e638f2681a85c" }
 dependencies = [
     { name = "boto3" },
     { name = "botocore" },

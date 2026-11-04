@@ -4,7 +4,7 @@ This repository collects shared Coworld game and supporting-role implementations
 
 The old standalone role repos (`players`, `commissioners`, `reporters`, `graders`, and `diagnosers`) are archived
 pointers to this repo. New shared role work belongs here. Game-specific pieces belong beside their game in the relevant
-`Metta-AI/coworld-<slug>` repo.
+`softmax-universe/coworld-<slug>` repo.
 
 The canonical Coworld rebuild flow is to start from a `packages/coworld` template, the Paint Arena example, or the
 closest implementation in this repo, then copy any Coworld-specific piece into the owning `coworld-<slug>` repo before
@@ -36,12 +36,12 @@ for that Coworld.
 
 ## Layout
 
-- `games/` - imported from `Metta-AI/games`
-- `players/` - imported from `Metta-AI/players`
-- `commissioners/` - imported from `Metta-AI/commissioners`
-- `reporters/` - imported from `Metta-AI/reporters`
-- `graders/` - imported from `Metta-AI/graders`
-- `diagnosers/` - imported from `Metta-AI/diagnosers`
+- `games/` - imported from `softmax-universe/games`
+- `players/` - imported from `softmax-universe/players`
+- `commissioners/` - imported from `softmax-universe/commissioners`
+- `reporters/` - imported from `softmax-universe/reporters`
+- `graders/` - imported from `softmax-universe/graders`
+- `diagnosers/` - imported from `softmax-universe/diagnosers`
 
 Each source repository's `main` branch history was rewritten under its folder and merged into this repository.
 

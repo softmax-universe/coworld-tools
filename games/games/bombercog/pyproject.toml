@@ -40,8 +40,8 @@ dev = [
 bombercog-play = "bombercog.cli:cli"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/bomber-cog"
-Repository = "https://github.com/Metta-AI/bomber-cog"
+Homepage = "https://github.com/softmax-universe/bomber-cog"
+Repository = "https://github.com/softmax-universe/bomber-cog"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/bombercog"]

@@ -106,7 +106,7 @@ wire format is **game-owned** and documented at the URI in the manifest's
 
 | Game | Protocol | Wire format summary |
 |---|---|---|
-| Among Them | [bitscreen_v1](https://github.com/Metta-AI/bitworld/blob/master/docs/bitscreen_v1.md) | Binary. Server → client: 8192-byte frame (128×128 4-bit packed pixels). Client → server: 2-byte button packet or `[0x01] + ascii` chat packet. |
+| Among Them | [bitscreen_v1](https://github.com/softmax-universe/bitworld/blob/master/docs/bitscreen_v1.md) | Binary. Server → client: 8192-byte frame (128×128 4-bit packed pixels). Client → server: 2-byte button packet or `[0x01] + ascii` chat packet. |
 | Cogs vs Clips | `coworld.player.v1` | JSON. First server message is `player_config`; subsequent server messages are `observation` with mettagrid tokens. Player replies with `action` (by `action_index` or `action_name`). Server sends `final` and closes. |
 | Paint Arena | custom JSON | `observation` in, `move` out. |
 

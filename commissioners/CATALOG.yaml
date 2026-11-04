@@ -1,33 +1,33 @@
 entries:
   - name: default-commissioner
     source: commissioners/ruleset_strategy_commissioner
-    source_url: https://github.com/Metta-AI/coworld-tools/tree/main/commissioners/commissioners/ruleset_strategy_commissioner
-    image: ghcr.io/metta-ai/commissioners-default:latest
+    source_url: https://github.com/softmax-universe/coworld-tools/tree/main/commissioners/commissioners/ruleset_strategy_commissioner
+    image: ghcr.io/softmax-universe/commissioners-default:latest
     target: "*"
     status: active
-    owner: Metta-AI
+    owner: softmax-universe
     description: Config-driven commissioner using the default round-robin config.
   - name: among-them-commissioner
     source: commissioners/ruleset_strategy_commissioner
-    source_url: https://github.com/Metta-AI/coworld-tools/tree/main/commissioners/commissioners/ruleset_strategy_commissioner
-    image: ghcr.io/metta-ai/commissioners-among-them-commissioner:latest
+    source_url: https://github.com/softmax-universe/coworld-tools/tree/main/commissioners/commissioners/ruleset_strategy_commissioner
+    image: ghcr.io/softmax-universe/commissioners-among-them-commissioner:latest
     target: among_them
     status: active
-    owner: Metta-AI
+    owner: softmax-universe
     description: Config-driven commissioner using the Among Them ruleset config.
   - name: cue-n-woo-commissioner
     source: commissioners/ruleset_strategy_commissioner
-    source_url: https://github.com/Metta-AI/coworld-tools/tree/main/commissioners/commissioners/ruleset_strategy_commissioner
-    image: ghcr.io/metta-ai/commissioners-cue-n-woo:latest
+    source_url: https://github.com/softmax-universe/coworld-tools/tree/main/commissioners/commissioners/ruleset_strategy_commissioner
+    image: ghcr.io/softmax-universe/commissioners-cue-n-woo:latest
     target: cue_n_woo
     status: active
-    owner: Metta-AI
+    owner: softmax-universe
     description: Config-driven commissioner using Cue n Woo leaderboard-neighbor scheduling with throttled episode dispatch.
   - name: proxywar-commissioner
     source: commissioners/ruleset_strategy_commissioner
-    source_url: https://github.com/Metta-AI/coworld-tools/tree/main/commissioners/commissioners/ruleset_strategy_commissioner
-    image: ghcr.io/metta-ai/commissioners-proxywar:latest
+    source_url: https://github.com/softmax-universe/coworld-tools/tree/main/commissioners/commissioners/ruleset_strategy_commissioner
+    image: ghcr.io/softmax-universe/commissioners-proxywar:latest
     target: proxywar
     status: active
-    owner: Metta-AI
+    owner: softmax-universe
     description: Config-driven commissioner using ProxyWar rolling-window scheduling for 2-player and 4-player variants with throttled episode dispatch.

@@ -32,8 +32,8 @@ amongcogs-headless = "amongcogs.headless:main"
 amongcogs-parity = "amongcogs.parity:main"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/coworld-amongcogs"
-Repository = "https://github.com/Metta-AI/coworld-amongcogs.git"
+Homepage = "https://github.com/softmax-universe/coworld-amongcogs"
+Repository = "https://github.com/softmax-universe/coworld-amongcogs.git"
 
 [tool.setuptools.packages.find]
 where = ["src"]

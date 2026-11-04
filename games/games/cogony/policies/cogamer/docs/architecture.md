@@ -84,7 +84,7 @@ Between these calls, Python runs autonomously using whatever knob values were la
 
 ## Reference: alpha.0 (tournament rival)
 
-The alpha.0 agent lives at `metta-ai/cogora` (`src/cvc/cogent/player_cog/policy/`). Key differences from our agent:
+The alpha.0 agent lives at `softmax-universe/cogora` (`src/cvc/cogent/player_cog/policy/`). Key differences from our agent:
 
 - **`RETREAT_MARGIN = 20`** (we use 15) — more conservative survival
 - **Hotspot tracking**: Tracks scramble history per junction via `_shared_hotspots` counters. Aligners deprioritize junctions with high scramble counts (weight 8.0). We don't track scramble history at all

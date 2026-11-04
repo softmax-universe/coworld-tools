@@ -1,6 +1,6 @@
 # cogame
 
-A starter template for a **new [MettaGrid](https://github.com/Metta-AI/mettagrid)
+A starter template for a **new [MettaGrid](https://github.com/softmax-universe/mettagrid)
 game** with a self-contained variant framework. The framework classes
 (`CoGameMission`, `CoGameMissionVariant`, `VariantRegistry`, `CoGame`,
 `register_game`, `get_game`) live under [`src/cogame/framework/`](src/cogame/framework/),
@@ -16,7 +16,7 @@ This template gives you:
 - a standalone `cogame-play` CLI for quick local sanity checks,
 - the game-authoring [`cg.game.*`](skills/) skills (5 skills: `new-game`,
   `build-game`, `core-mechanics`, `variant-tree`, `generate-assets`) copied
-  from `metta-ai/metta`, so AI agents have the same guidance inside a fresh
+  from `softmax-universe/softmax`, so AI agents have the same guidance inside a fresh
   `cogame` clone as they do inside the main monorepo. Player-authoring
   skills (profiling, leaderboard-gap, scrimmage-gauntlet, etc.) are
   intentionally excluded — this template is for building a new *game*, not

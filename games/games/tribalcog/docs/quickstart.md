@@ -7,7 +7,7 @@ Status: Active
 This guide helps new developers get up and running with Tribal Village quickly.
 
 Run commands from `games/tribalcog` unless a command explicitly says it is for
-the root `Metta-AI/games` workspace.
+the root `softmax-universe/games` workspace.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ library or GUI binary.
 ### Python (for training bindings)
 
 - **Version**: Python 3.11 or 3.12 for this package; Python 3.12 for the root
-  `Metta-AI/games` workspace.
+  `softmax-universe/games` workspace.
 - **Packages**: gymnasium, numpy, pufferlib
 
 ```bash
@@ -50,7 +50,7 @@ For training support with CoGames/PufferLib:
 pip install -e .[cogames]
 ```
 
-From the root `Metta-AI/games` workspace, use the workspace package instead of
+From the root `softmax-universe/games` workspace, use the workspace package instead of
 a separate editable install:
 
 ```bash
@@ -321,7 +321,7 @@ nim r -d:release --path:src tribal_village.nim
 # Headless smoke test
 tribalcog play --render ansi --steps 128
 
-# Same smoke test from the root Metta-AI/games uv workspace
+# Same smoke test from the root softmax-universe/games uv workspace
 uv run --package tribalcog tribalcog play --render ansi --steps 128
 
 # Compile check (CI gate)

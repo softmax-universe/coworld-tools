@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Cogshambo pixel-art sprites with Retro Diffusion on Replicate.
 
-Adapted from metta-ai/metta tools/gen_sprite.py at commit
+Adapted from softmax-universe/softmax tools/gen_sprite.py at commit
 104d3d15a851442dc28e03fe30c26d0055e41f0c.
 """
 

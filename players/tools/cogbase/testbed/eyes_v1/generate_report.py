@@ -10,7 +10,7 @@ Usage:
 
 Examples:
     python generate_report.py ~/coding/metta
-    python generate_report.py https://github.com/Metta-AI/metta
+    python generate_report.py https://github.com/softmax-universe/softmax
     python generate_report.py ./my-game --output-dir ./output/my-game
 """
 

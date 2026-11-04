@@ -1,7 +1,7 @@
 # cogbase
 
 Tools and skills for faster development of base agents for
-[Coworld](https://github.com/Metta-AI/metta/tree/main/packages/coworld) games.
+[Coworld](https://github.com/softmax-universe/softmax/tree/main/packages/coworld) games.
 
 ## What is this?
 
@@ -74,10 +74,10 @@ terminology.
 
 ## Related projects
 
-- [Coworld](https://github.com/Metta-AI/metta/tree/main/packages/coworld) -- the
+- [Coworld](https://github.com/softmax-universe/softmax/tree/main/packages/coworld) -- the
   v2 tournament platform: CLI, manifest format, and player/game runtime
   contract these agents target
-- [Metta](https://github.com/Metta-AI/metta) -- the underlying Metta framework
+- [Metta](https://github.com/softmax-universe/softmax) -- the underlying Metta framework
   (BitWorld engine, mettagrid, Coworld)
 
 ## Setup

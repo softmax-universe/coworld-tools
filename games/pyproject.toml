@@ -1,7 +1,7 @@
 [project]
 name = "metta-games"
 version = "0.1.0"
-description = "Consolidated game definitions and runtime packages for Metta-AI Coworld-style environments."
+description = "Consolidated game definitions and runtime packages for softmax-universe Coworld-style environments."
 requires-python = ">=3.12,<3.13"
 dependencies = []
 
@@ -9,11 +9,11 @@ dependencies = []
 package = false
 
 [tool.uv.sources]
-# Pin mettagrid at the published Metta-AI/mettagrid mirror so workspace members
+# Pin mettagrid at the published softmax-universe/mettagrid mirror so workspace members
 # resolve `mettagrid.cogame` and `mettagrid.sdk.cogsguard` (added in
 # mettagrid-v0.26.24, not yet on PyPI). Drop this once a newer mettagrid wheel
 # is published.
-mettagrid = { git = "https://github.com/Metta-AI/mettagrid.git", tag = "mettagrid-v0.26.24" }
+mettagrid = { git = "https://github.com/softmax-universe/mettagrid.git", tag = "mettagrid-v0.26.24" }
 
 [tool.uv.workspace]
 members = [

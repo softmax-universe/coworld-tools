@@ -18,7 +18,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: metta-ai/reporters-mettagrid-replay-atlas
+  IMAGE_NAME: softmax-universe/reporters-mettagrid-replay-atlas
 
 jobs:
   build-and-push:

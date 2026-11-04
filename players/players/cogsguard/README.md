@@ -36,7 +36,7 @@ players/cogsguard/
 The `_shared/` directory is the one explicit exception to the "each policy
 wholly self-contained" rule for `players/`. It is consumed by `baseline/`,
 `tiny_baseline/`, `role/`, `buggy/`, and `cranky/`. Game-owned semantic
-decoding lives in `cogsguard.semantic` in `Metta-AI/coworld-cogs-vs-clips`;
+decoding lives in `cogsguard.semantic` in `softmax-universe/coworld-cogs-vs-clips`;
 `_shared/semantic/` contains the policy-facing prompt, planner, learning, and
 progress helpers that build on that public surface.
 

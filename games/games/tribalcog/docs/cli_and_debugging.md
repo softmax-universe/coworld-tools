@@ -17,7 +17,7 @@ Preferred (CLI):
 Text-only smoke test (no GUI):
 - `tribalcog play --render ansi --steps 128`
 
-Root `Metta-AI/games` workspace:
+Root `softmax-universe/games` workspace:
 - `uv run --package tribalcog tribalcog play --render ansi --steps 128`
 
 Direct Nim run (bypasses Python CLI):

@@ -17,7 +17,7 @@ VENV_MS="$REPO_ROOT/.venv/lib/python3.12/site-packages/mettagrid/nim/mettascope"
 
 if [ ! -d "$MS_SRC" ]; then
   echo "ERROR: $MS_SRC not found. Clone with:"
-  echo "  git clone --filter=blob:none https://github.com/Metta-AI/daveey-mettagrid-cogony.git .mettagrid"
+  echo "  git clone --filter=blob:none https://github.com/softmax-universe/daveey-mettagrid-cogony.git .mettagrid"
   echo "  (cd .mettagrid && git checkout cogony)"
   exit 1
 fi
