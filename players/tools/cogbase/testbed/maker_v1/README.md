@@ -59,7 +59,7 @@ exactly the same way every time. In the current slice, Maker produces:
   `--smoke-test` is run
 
 The generated bundle is shaped to ship through the
-[Coworld CLI](https://github.com/Metta-AI/metta/tree/main/packages/coworld):
+[Coworld CLI](https://github.com/softmax-universe/softmax/tree/main/packages/coworld):
 
 ```bash
 docker build --platform=linux/amd64 -t <game>-player:latest .

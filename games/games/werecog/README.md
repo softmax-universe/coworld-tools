@@ -7,10 +7,10 @@ Core engine and CLI functionality stay in upstream packages such as `mettagrid` 
 
 ## Current Status
 
-This extraction was cut from `Metta-AI/metta` branch `relh/werewolf-single-pr`.
+This extraction was cut from `softmax-universe/softmax` branch `relh/werewolf-single-pr`.
 Standalone games now install into metta through optional extras on `cogames` instead of carrying branch-pinned upstream sources inside their own `pyproject.toml`. `metta play werecog` expects a `metta` checkout or install from the matching branch until the shared upstream support is released.
 
-This repository carries `Metta-AI/cogame` as an upstream template merge parent.
+This repository carries `softmax-universe/cogame` as an upstream template merge parent.
 Future template updates can be merged from `cogame/main` without rewriting
 Werecog's game history.
 
@@ -67,7 +67,7 @@ Focused tests live under `tests/`.
 
 ## Template Sync
 
-This checkout has a local `cogame` remote for `https://github.com/Metta-AI/cogame.git`.
+This checkout has a local `cogame` remote for `https://github.com/softmax-universe/cogame.git`.
 Do not push to that remote. To merge future template updates:
 
 ```bash

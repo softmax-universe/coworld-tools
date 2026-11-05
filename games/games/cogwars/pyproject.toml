@@ -40,11 +40,11 @@ dev = [
 cogwars-play = "cogame.cli:cli"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/cogame-cogwars"
-Repository = "https://github.com/Metta-AI/cogame-cogwars"
+Homepage = "https://github.com/softmax-universe/coworld-cogwars"
+Repository = "https://github.com/softmax-universe/coworld-cogwars"
 
 [tool.uv.sources]
-cogames = { git = "https://github.com/Metta-AI/metta.git", subdirectory = "packages/cogames" }
+cogames = { git = "https://github.com/softmax-universe/softmax.git", subdirectory = "packages/cogames" }
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/cogame"]

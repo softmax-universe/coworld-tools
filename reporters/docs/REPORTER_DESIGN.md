@@ -1,6 +1,6 @@
 # Reporter Design
 
-> **Status:** the canonical Coworld reporter contract is owned upstream in `Metta-AI/metta` at
+> **Status:** the canonical Coworld reporter contract is owned upstream in `softmax-universe/softmax` at
 > [`packages/coworld/src/coworld/docs/roles/reporter.md`](../../metta/packages/coworld/src/coworld/docs/roles/reporter.md). This document is the reporters-repo restatement of that contract plus repo-local notes (status of the implementations here, repo conventions, and known migration debt against the canonical shape).
 >
 > **Canonical contract version:** the `contract defined, runtime pending` shape described in metta's `docs/roles/reporter.md` and `EPISODE_BUNDLE_README.md` (last revised in metta on 2026-05-22). When this doc and the metta role doc disagree, **metta is authoritative.**

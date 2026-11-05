@@ -39,8 +39,8 @@ test = ["pytest>=8.0.0"]
 overcogged = "overcogged.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/coworld-overcogged"
-Repository = "https://github.com/Metta-AI/coworld-overcogged.git"
+Homepage = "https://github.com/softmax-universe/coworld-overcogged"
+Repository = "https://github.com/softmax-universe/coworld-overcogged.git"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/overcogged"]

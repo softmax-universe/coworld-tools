@@ -2,7 +2,7 @@
 
 Standalone home for the social-deduction game formerly developed in the Metta monorepo.
 
-This repository is downstream of [`Metta-AI/cogame`](https://github.com/Metta-AI/cogame), the shared standalone-game template. Template docs, skills, and agent guidance live here so future template updates can be merged into AmongCogs without copying files by hand.
+This repository is downstream of [`softmax-universe/cogame`](https://github.com/softmax-universe/cogame), the shared standalone-game template. Template docs, skills, and agent guidance live here so future template updates can be merged into AmongCogs without copying files by hand.
 
 ## Status
 
@@ -50,4 +50,4 @@ uv run pytest tests/amongcogs -q
 - `src/amongcogs/missions/` base mission wiring
 - `src/amongcogs/assets/` art prompts and derivation scripts
 - `tests/amongcogs/` focused regression tests
-- `docs/` and `skills/` shared game-authoring references inherited from `Metta-AI/cogame`
+- `docs/` and `skills/` shared game-authoring references inherited from `softmax-universe/cogame`

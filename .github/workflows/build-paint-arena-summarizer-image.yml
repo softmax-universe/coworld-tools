@@ -3,7 +3,7 @@ name: "Build Paint Arena Summarizer Image"
 # Builds and publishes the paint_arena_summarizer image to GHCR.
 #
 # - On push to main with a relevant path change, the image is built and
-#   pushed to ghcr.io/metta-ai/reporters-paint-arena-summarizer:latest
+#   pushed to ghcr.io/softmax-universe/reporters-paint-arena-summarizer:latest
 #   plus an immutable :main-<sha> tag.
 # - On pull requests, the image is built but not pushed.
 # - On workflow_dispatch, the latest commit on main is rebuilt manually.
@@ -28,7 +28,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: metta-ai/reporters-paint-arena-summarizer
+  IMAGE_NAME: softmax-universe/reporters-paint-arena-summarizer
 
 jobs:
   build-and-push:

@@ -2,9 +2,9 @@
 
 Diagnoser implementations for **coworlds** - policy-facing runnables and prompts that evaluate a target policy and produce actionable advice or assay results.
 
-> **Status:** shared diagnoser source inside `Metta-AI/coworld-tools`. The old `Metta-AI/diagnosers` repo is archived.
+> **Status:** shared diagnoser source inside `softmax-universe/coworld-tools`. The old `softmax-universe/diagnosers` repo is archived.
 > Keep reusable diagnosers here. Keep a diagnoser beside a game when it is game-specific and should be rebuilt with that
-> `Metta-AI/coworld-<slug>` repo.
+> `softmax-universe/coworld-<slug>` repo.
 >
 > The Among Them starter diagnoser is implemented in
 > [`diagnosers/among_them/among_them_diagnoser/`](diagnosers/among_them/among_them_diagnoser/). The role is defined at

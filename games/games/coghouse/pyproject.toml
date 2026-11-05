@@ -39,11 +39,11 @@ dev = [
 coghouse-play = "cogame.cli:cli"
 
 [project.urls]
-Homepage = "https://github.com/Metta-AI/cogame-coghouse"
-Repository = "https://github.com/Metta-AI/cogame-coghouse"
+Homepage = "https://github.com/softmax-universe/cogame-coghouse"
+Repository = "https://github.com/softmax-universe/cogame-coghouse"
 
 [tool.uv.sources]
-mettagrid = { git = "https://github.com/Metta-AI/mettagrid.git" }
+mettagrid = { git = "https://github.com/softmax-universe/mettagrid.git" }
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/cogame"]

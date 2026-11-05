@@ -1,14 +1,14 @@
 # players
 
 Single-source repository for the development and internal publication of
-players for [Coworld](https://github.com/Metta-AI/metta/tree/main/packages/coworld)
+players for [Coworld](https://github.com/softmax-universe/softmax/tree/main/packages/coworld)
 games. Players developed here are intended to be the canonical, shareable
 players used across the Softmax Coworld system — uploadable with the
 `coworld` CLI, submittable to leagues, and bundleable into game manifests.
 
-> **Status:** shared player source inside `Metta-AI/coworld-tools`. The old `Metta-AI/players` repo is archived. Keep
+> **Status:** shared player source inside `softmax-universe/coworld-tools`. The old `softmax-universe/players` repo is archived. Keep
 > reusable policies and player SDK work here. Keep bundled starter players or game-coupled policy code in the owning
-> `Metta-AI/coworld-<slug>` repo until they are intentionally promoted into this shared tree.
+> `softmax-universe/coworld-<slug>` repo until they are intentionally promoted into this shared tree.
 
 The repo contains four things:
 

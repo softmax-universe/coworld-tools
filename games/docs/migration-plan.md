@@ -2,7 +2,7 @@
 
 ## Goals
 
-- Make `Metta-AI/games` the canonical source tree for game definitions and game runtime packages.
+- Make `softmax-universe/games` the canonical source tree for game definitions and game runtime packages.
 - Leave legacy repositories untouched until humans decide how to retire or mirror them.
 - Keep each game's current package shape runnable during migration instead of forcing one runtime model.
 
@@ -23,7 +23,7 @@ workspace is for repository-level discovery and lightweight package checks; each
 entrypoints, and dependency details.
 
 First-wave standalone Coworld migrations are complete for `amongcogs`, `hungercog`, `overcogged`, `diplomacog`, and
-`werecog`. Their renamed `Metta-AI/coworld-*` repositories are now the source of truth for certifiable runtime work;
+`werecog`. Their renamed `softmax-universe/coworld-*` repositories are now the source of truth for certifiable runtime work;
 this aggregate repo keeps matching snapshots while the standalone-per-game and aggregate-repo models are both under
 consideration.
 
@@ -31,7 +31,7 @@ Follow-up work for Python games:
 
 1. Update remaining package URLs from old standalone repos to their current source-of-truth location.
 2. Move shared template docs and skills out of individual game packages when they are duplicated.
-3. Update `Metta-AI/metta` and `Metta-AI/cogames` optional game metadata to point at current game sources.
+3. Update `softmax-universe/softmax` and `softmax-universe/cogames` optional game metadata to point at current game sources.
 4. Add targeted smoke tests per game from inside this repo.
 5. Rename template-shaped imports that still expose `src/cogame` before adding them to the root `uv` workspace.
 

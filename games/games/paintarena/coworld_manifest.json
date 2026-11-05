@@ -100,11 +100,11 @@
     "protocols": {
       "player": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/coworld/blob/main/src/coworld/examples/paintarena/game/docs/player_protocol_spec.md"
+        "value": "https://github.com/softmax-universe/coworld/blob/main/src/coworld/examples/paintarena/game/docs/player_protocol_spec.md"
       },
       "global": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/coworld/blob/main/src/coworld/examples/paintarena/game/docs/global_protocol_spec.md"
+        "value": "https://github.com/softmax-universe/coworld/blob/main/src/coworld/examples/paintarena/game/docs/global_protocol_spec.md"
       }
     }
   },
@@ -124,8 +124,8 @@
       "name": "Paint Arena Grader",
       "type": "grader",
       "description": "Reference PaintArena grader: consumes replay/results artifacts and emits a scalar creator-interest score for ranking useful episodes.",
-      "source_url": "https://github.com/Metta-AI/coworld-tools/tree/main/graders/graders/paint_arena/paint_arena_grader",
-      "image": "ghcr.io/metta-ai/graders-paint-arena:latest"
+      "source_url": "https://github.com/softmax-universe/coworld-tools/tree/main/graders/graders/paint_arena/paint_arena_grader",
+      "image": "ghcr.io/softmax-universe/graders-paint-arena:latest"
     }
   ],
   "variants": [

@@ -1,8 +1,8 @@
 # Cogame Template Upstream
 
-Tribal Village is connected to `Metta-AI/cogame` through git history so future template updates can be merged from the template repo. The Nim runtime remains the source of truth for this game.
+Tribal Village is connected to `softmax-universe/cogame` through git history so future template updates can be merged from the template repo. The Nim runtime remains the source of truth for this game.
 
-This template relationship is separate from the current `Metta-AI/games`
+This template relationship is separate from the current `softmax-universe/games`
 ownership model. Tribal Cog is now maintained as `games/tribalcog` in this
 repository, and the Metta/CoGames bridge should load the standalone package
 from this subdirectory rather than from the old imported source repository.
@@ -10,7 +10,7 @@ from this subdirectory rather than from the old imported source repository.
 Use `cogame` as the upstream remote name:
 
 ```bash
-git remote add cogame git@github.com:Metta-AI/cogame.git
+git remote add cogame git@github.com:softmax-universe/cogame.git
 git fetch cogame
 ```
 

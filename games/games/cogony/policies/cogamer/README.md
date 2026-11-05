@@ -1,9 +1,9 @@
 # Cogony Cogamer Policy
 
-A Cogony (Claude vs Claude) policy for [CoGames](https://github.com/Metta-AI/cogames).
+A Cogony (Claude vs Claude) policy for [CoGames](https://github.com/softmax-universe/cogames).
 
-This package was imported from the archived `Metta-AI/cogamer-policy-cogony` repo and now lives under
-`Metta-AI/games` with the rest of the Cogony game sources.
+This package was imported from the archived `softmax-universe/cogamer-policy-cogony` repo and now lives under
+`softmax-universe/games` with the rest of the Cogony game sources.
 
 ## Quick Start
 

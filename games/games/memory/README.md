@@ -1,7 +1,7 @@
 # memory
 
 A starter template for a **new MettaGrid game** that builds on the full
-[`cogames`](https://github.com/Metta-AI/metta/tree/main/packages/cogames)
+[`cogames`](https://github.com/softmax-universe/softmax/tree/main/packages/cogames)
 variant framework.
 
 This template gives you:
@@ -14,7 +14,7 @@ This template gives you:
 - a standalone `memory-play` CLI for quick local sanity checks,
 - the game-authoring [`cg.game.*`](skills/) skills (5 skills: `new-game`,
   `build-game`, `core-mechanics`, `variant-tree`, `generate-assets`) copied
-  from `metta-ai/metta`, so AI agents have the same guidance inside a fresh
+  from `softmax-universe/softmax`, so AI agents have the same guidance inside a fresh
   `cogame` clone as they do inside the main monorepo. Player-authoring
   skills (profiling, leaderboard-gap, scrimmage-gauntlet, etc.) are
   intentionally excluded — this template is for building a new *game*, not

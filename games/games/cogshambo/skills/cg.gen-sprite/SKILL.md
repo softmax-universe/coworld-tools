@@ -10,7 +10,7 @@ args:
 
 Generate pixel art sprites with `tools/gen_sprite.py`.
 
-Source: copied and adapted from `metta-ai/metta` `skills/cg.gen-sprite` and `tools/gen_sprite.py` at commit
+Source: copied and adapted from `softmax-universe/softmax` `skills/cg.gen-sprite` and `tools/gen_sprite.py` at commit
 `104d3d15a851442dc28e03fe30c26d0055e41f0c`.
 
 ## Prerequisites

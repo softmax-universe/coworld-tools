@@ -1,6 +1,6 @@
 # Tribal Village
 
-Tribal Village is the Tribal Cog game package in `Metta-AI/games`: a native Nim simulation with a Python/PufferLib wrapper and CoGames training hooks. Teams gather resources, craft items, build structures, train military units, research technologies, and compete across Age of Empires II-inspired victory conditions.
+Tribal Village is the Tribal Cog game package in `softmax-universe/games`: a native Nim simulation with a Python/PufferLib wrapper and CoGames training hooks. Teams gather resources, craft items, build structures, train military units, research technologies, and compete across Age of Empires II-inspired victory conditions.
 
 The package now supports both standalone CoGames/PufferLib use and a container-first Coworld runtime. The Coworld shape lives beside the native package: `coworld_manifest.json`, `Dockerfile`, `player/Dockerfile`, and `tribal_village_env/coworld/`.
 
@@ -31,7 +31,7 @@ tribalcog play
 # Run with random actions (text mode)
 tribalcog play --render ansi --random-actions --steps 100
 
-# Run from the root Metta-AI/games uv workspace
+# Run from the root softmax-universe/games uv workspace
 uv run --package tribalcog tribalcog play --render ansi --steps 100
 
 # Train with CoGames/PufferLib
@@ -90,7 +90,7 @@ obs, reward, terminated, truncated, info = env.step(actions)
 | Topic | Description |
 |-------|-------------|
 | [Quickstart](docs/quickstart.md) | Prerequisites, building, running, testing |
-| [Metta Integration](docs/metta_integration.md) | How Tribal Cog fits `Metta-AI/games`, CoGames, Metta recipes, and future Coworld packaging |
+| [Metta Integration](docs/metta_integration.md) | How Tribal Cog fits `softmax-universe/games`, CoGames, Metta recipes, and future Coworld packaging |
 | [Cogame Template Sync](docs/cogame_template.md) | Template upstream and merge guidance |
 | [Game Logic](docs/game_logic.md) | Step loop, actions, entities, episode rules |
 | [Action Space](docs/action_space.md) | Discrete 308 actions (11 verbs * 28 arguments) |

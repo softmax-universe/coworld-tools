@@ -242,7 +242,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "cogames", git = "https://github.com/Metta-AI/metta.git?subdirectory=packages%2Fcogames" },
+    { name = "cogames", git = "https://github.com/softmax-universe/softmax.git?subdirectory=packages%2Fcogames" },
     { name = "mettagrid" },
     { name = "numpy", specifier = ">=1.26" },
     { name = "pydantic", specifier = ">=2" },
@@ -256,7 +256,7 @@ provides-extras = ["dev"]
 [[package]]
 name = "cogames"
 version = "0.27.1.post1.dev215"
-source = { git = "https://github.com/Metta-AI/metta.git?subdirectory=packages%2Fcogames#f4a872a03e0106726ac062ea03ce41fad8fab27a" }
+source = { git = "https://github.com/softmax-universe/softmax.git?subdirectory=packages%2Fcogames#f4a872a03e0106726ac062ea03ce41fad8fab27a" }
 dependencies = [
     { name = "anthropic", extra = ["bedrock"] },
     { name = "httpx" },
@@ -730,7 +730,7 @@ wheels = [
 [[package]]
 name = "mettagrid"
 version = "0.26.10.post1.dev568"
-source = { git = "https://github.com/Metta-AI/metta.git?subdirectory=packages%2Fmettagrid#f4a872a03e0106726ac062ea03ce41fad8fab27a" }
+source = { git = "https://github.com/softmax-universe/softmax.git?subdirectory=packages%2Fmettagrid#f4a872a03e0106726ac062ea03ce41fad8fab27a" }
 dependencies = [
     { name = "boto3" },
     { name = "botocore" },
@@ -1354,7 +1354,7 @@ wheels = [
 [[package]]
 name = "softmax-cli"
 version = "0.26.1.post1.dev678"
-source = { git = "https://github.com/Metta-AI/metta.git?subdirectory=packages%2Fsoftmax-cli#f4a872a03e0106726ac062ea03ce41fad8fab27a" }
+source = { git = "https://github.com/softmax-universe/softmax.git?subdirectory=packages%2Fsoftmax-cli#f4a872a03e0106726ac062ea03ce41fad8fab27a" }
 dependencies = [
     { name = "fastapi" },
     { name = "httpx" },

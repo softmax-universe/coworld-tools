@@ -9,12 +9,12 @@ This repo is the implementation home for games. Unlike the role repos such as `r
 `graders`, `diagnosers`, and `commissioners`, it is not an empty scaffold for one process-style role.
 It is an aggregate of real game packages with different runtimes, languages, and migration states.
 
-The job of this document is to state how `Metta-AI/games` should differ from those role repos while
+The job of this document is to state how `softmax-universe/games` should differ from those role repos while
 still fitting the Coworld split.
 
 ## Repository contract
 
-`Metta-AI/games` owns:
+`softmax-universe/games` owns:
 
 - Game source packages and runtime containers.
 - Game assets, schemas, local servers, replay viewers, and game-specific docs.
@@ -24,12 +24,12 @@ still fitting the Coworld split.
 
 It does not own:
 
-- General player/policy development. Use `Metta-AI/players`.
-- Episode reports. Use `Metta-AI/reporters`.
-- Grading implementations. Use `Metta-AI/graders`.
-- Diagnostics implementations. Use `Metta-AI/diagnosers`.
-- Round orchestration implementations. Use `Metta-AI/commissioners`.
-- Coplayer UI/workbench code. Use `Metta-AI/optimizers` unless that repo is explicitly repurposed.
+- General player/policy development. Use `softmax-universe/players`.
+- Episode reports. Use `softmax-universe/reporters`.
+- Grading implementations. Use `softmax-universe/graders`.
+- Diagnostics implementations. Use `softmax-universe/diagnosers`.
+- Round orchestration implementations. Use `softmax-universe/commissioners`.
+- Coplayer UI/workbench code. Use `softmax-universe/optimizers` unless that repo is explicitly repurposed.
 
 ## Expected layout
 

@@ -16,7 +16,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: metta-ai/reporters-cogs-vs-clips-summarizer
+  IMAGE_NAME: softmax-universe/reporters-cogs-vs-clips-summarizer
 
 jobs:
   build-and-push:

@@ -1,7 +1,7 @@
 """Small Coworld play-session primitives used by the local Cogony runner.
 
 These mirror the play-session and artifact contract from
-``packages/coworld/src/coworld`` in Metta-AI/metta while keeping Cogony's local
+``packages/coworld/src/coworld`` in softmax-universe/softmax while keeping Cogony's local
 in-process episode loop.
 """
 

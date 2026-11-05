@@ -2,9 +2,9 @@
 
 Reporter implementations for **Coworlds** — on-demand runnables that turn one episode's bundle (`results.json`, `replay.json`, optional logs, optional config and error info) into a single zip containing a rendered highlight (`.md` or `.html`), a structured event log (Parquet), and optional machine traces.
 
-> **Status:** shared reporter source inside `Metta-AI/coworld-tools`. The old `Metta-AI/reporters` repo is archived.
+> **Status:** shared reporter source inside `softmax-universe/coworld-tools`. The old `softmax-universe/reporters` repo is archived.
 > Keep reusable reporters and reporter SDK work here. Keep a reporter beside a game when it is game-specific and should
-> be rebuilt with that `Metta-AI/coworld-<slug>` repo.
+> be rebuilt with that `softmax-universe/coworld-<slug>` repo.
 
 > **Canonical contract:** [`packages/coworld/src/coworld/docs/roles/reporter.md`](../metta/packages/coworld/src/coworld/docs/roles/reporter.md) in metta. Local restatement: [`docs/REPORTER_DESIGN.md`](docs/REPORTER_DESIGN.md). Navigation guide into the rest of metta: [`docs/COWORLD_REFERENCE.md`](docs/COWORLD_REFERENCE.md).
 >
@@ -105,9 +105,9 @@ Example shape (illustrative; see [`CATALOG.yaml`](CATALOG.yaml) for the live ent
 ```yaml
 entries:
   - name: paint-arena-summarizer
-    image: ghcr.io/metta-ai/reporters-paint-arena-summarizer:latest
+    image: ghcr.io/softmax-universe/reporters-paint-arena-summarizer:latest
     source: reporters/paint_arena/paint_arena_summarizer
-    source_url: https://github.com/Metta-AI/coworld-tools/tree/main/reporters/reporters/paint_arena/paint_arena_summarizer
+    source_url: https://github.com/softmax-universe/coworld-tools/tree/main/reporters/reporters/paint_arena/paint_arena_summarizer
     status: active
     target: paint_arena
     owner: jboggs
@@ -177,9 +177,9 @@ For everything else — manifest declaration shape, the bundle's internal `manif
 | `reporter_sdk` | (shared) | Library | **Implemented** — `BundleReader`, `OutputManifest` + `build_report_zip`, deterministic zip writer, shared event-log schema and writer, trace manifest validation, env-var URI helpers, retrying `read_uri`/`write_uri`. Imported by concrete reporters. |
 | `templates/summarizer_template` | (template) | Reporter scaffold | **Implemented** — extracted from the post-SDK `paint_arena_summarizer`. Runs end-to-end against a synthetic bundle and emits a valid-shape (stub-content) output zip via [`reporter_sdk`](reporters/reporter_sdk/); scaffolding for new `<coworld>_summarizer` reporters, not registered in any Coworld manifest. |
 | `among_them/among_them_summarizer` | Among Them | Reporter | **Implemented (canonical, SDK-consuming, all eight design phases landed)** — second concrete reporter; full binary `.bitreplay` parser, input-stream analytics, HTML scoreboard, containerized smoke, determinism + zip-contract assertions, paint-arena-shaped README; tests passing. Imports its shared primitives from [`reporter_sdk`](reporters/reporter_sdk/). See [`reporters/among_them/among_them_summarizer/DESIGN.md`](reporters/among_them/among_them_summarizer/DESIGN.md). |
-| `default/default_reporter` | (any) | Reporter | **Implemented (canonical, SDK-consuming)** — the Softmax-published placeholder reporter. Renders a per-slot score summary from `results.json::scores`; no event log. Published to `ghcr.io/metta-ai/reporters-default:latest` via [`../.github/workflows/build-default-reporter-image.yml`](../.github/workflows/build-default-reporter-image.yml); referenced by Coworld manifests that have not shipped a game-specific reporter (satisfies the schema's `min_length=1` on `manifest.reporter[]`). See [`reporters/default/README.md`](reporters/default/README.md). |
+| `default/default_reporter` | (any) | Reporter | **Implemented (canonical, SDK-consuming)** — the Softmax-published placeholder reporter. Renders a per-slot score summary from `results.json::scores`; no event log. Published to `ghcr.io/softmax-universe/reporters-default:latest` via [`../.github/workflows/build-default-reporter-image.yml`](../.github/workflows/build-default-reporter-image.yml); referenced by Coworld manifests that have not shipped a game-specific reporter (satisfies the schema's `min_length=1` on `manifest.reporter[]`). See [`reporters/default/README.md`](reporters/default/README.md). |
 | `among_them/among_them_highlight_reel` | Among Them | Reporter | Scaffold only — no implementation. |
-| `cogs_vs_clips/cogs_vs_clips_summarizer` | Cogs vs Clips | Reporter | **Implemented (canonical, SDK-consuming)** — decodes compact MettaScope replays into per-agent `trace.jsonl`, `events.parquet`, `behavior_summary.json`, and a Markdown summary. Published to `ghcr.io/metta-ai/reporters-cogs-vs-clips-summarizer:latest` via [`../.github/workflows/build-cogs-vs-clips-summarizer-image.yml`](../.github/workflows/build-cogs-vs-clips-summarizer-image.yml). |
+| `cogs_vs_clips/cogs_vs_clips_summarizer` | Cogs vs Clips | Reporter | **Implemented (canonical, SDK-consuming)** — decodes compact MettaScope replays into per-agent `trace.jsonl`, `events.parquet`, `behavior_summary.json`, and a Markdown summary. Published to `ghcr.io/softmax-universe/reporters-cogs-vs-clips-summarizer:latest` via [`../.github/workflows/build-cogs-vs-clips-summarizer-image.yml`](../.github/workflows/build-cogs-vs-clips-summarizer-image.yml). |
 
 ### Build strategy: concrete reporter first, then extract
 
@@ -223,6 +223,6 @@ New reporters should start from the canonical Coworld role contract:
 - Prefer pure functions of the bundle. If a reporter needs richer external context, document the dependency in the reporter README and manifest entry.
 - Match the per-reporter README structure — what artifacts the zip contains, which files `manifest.json` flags, any non-obvious dependencies. [`reporters/paint_arena/paint_arena_summarizer/README.md`](reporters/paint_arena/paint_arena_summarizer/README.md) is the reference shape.
 - Add a `CATALOG.yaml` entry for the reporter when it ships — without one, tooling cannot find it.
-- **Add a root `../.github/workflows/build-<name>-image.yml` workflow that publishes the image to GHCR.** Every finished (non-scaffold) reporter in this repo must have a sibling root workflow that pushes to `ghcr.io/metta-ai/reporters-<name>:latest` on push to `main`. Use `../.github/workflows/build-default-reporter-image.yml` (or `build-paint-arena-summarizer-image.yml`) as the template — same structure, just swap the image name, the path filter, and the Dockerfile path. Without this workflow, the `image` field in the reporter's `CATALOG.yaml` entry is a forward-looking placeholder pointing at a tag that does not exist in the registry.
+- **Add a root `../.github/workflows/build-<name>-image.yml` workflow that publishes the image to GHCR.** Every finished (non-scaffold) reporter in this repo must have a sibling root workflow that pushes to `ghcr.io/softmax-universe/reporters-<name>:latest` on push to `main`. Use `../.github/workflows/build-default-reporter-image.yml` (or `build-paint-arena-summarizer-image.yml`) as the template — same structure, just swap the image name, the path filter, and the Dockerfile path. Without this workflow, the `image` field in the reporter's `CATALOG.yaml` entry is a forward-looking placeholder pointing at a tag that does not exist in the registry.
 
 For end-to-end author guidance, follow [`docs/REPORTER_DESIGN.md`](docs/REPORTER_DESIGN.md) and the metta role doc it points at.

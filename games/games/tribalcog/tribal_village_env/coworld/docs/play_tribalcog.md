@@ -79,7 +79,7 @@ can. Set `TRIBALCOG_PLAYER_MODE=noop` for a deterministic passive controller.
 
 ## Certification
 
-From the `Metta-AI/games` repository root, build the local Coworld game and
+From the `softmax-universe/games` repository root, build the local Coworld game and
 reference-player images:
 
 ```bash

@@ -49,7 +49,7 @@ Persephone's Escape includes a Coworld manifest and a separate tournament mode f
 npx tsx server.ts --mode=tournament
 ```
 
-Tournament configs must include `"mode": "tournament"` and runner-managed `tokens`. The Coworld manifest is `coworld_manifest.json`. The upstream contract is documented in [Metta's Coworld spec](https://github.com/Metta-AI/metta/blob/main/packages/coworld/COWORLD_README.md).
+Tournament configs must include `"mode": "tournament"` and runner-managed `tokens`. The Coworld manifest is `coworld_manifest.json`. The upstream contract is documented in [Metta's Coworld spec](https://github.com/softmax-universe/softmax/blob/main/packages/coworld/COWORLD_README.md).
 
 ## Game Flow
 

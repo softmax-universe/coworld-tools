@@ -77,7 +77,7 @@ the SDK's JSON bridge does not fit a binary game (see
 
 ## 1. The Player SDK (`players.player_sdk`)
 
-**Location:** `players/players/player_sdk` in `Metta-AI/coworld-tools`
+**Location:** `players/players/player_sdk` in `softmax-universe/coworld-tools`
 **Import root:** `players.player_sdk` (the repo is the `players` package).
 Pure Python, deps `numpy`/`pydantic`/`websockets` (workspace `pyproject.toml`).
 
@@ -230,9 +230,9 @@ limiter and self-corrects from any transient backlog.
 
 Crewborg's contract. Two checkouts matter:
 
-- **Game source (Nim):** `Metta-AI/coworld-crewrift` — the authoritative
+- **Game source (Nim):** `softmax-universe/coworld-crewrift` — the authoritative
   rules, protocol docs, reference bots, map assets. Read this for behavior.
-- **Coworld platform docs:** `src/coworld` in public `Metta-AI/coworld`
+- **Coworld platform docs:** `src/coworld` in public `softmax-universe/coworld`
   *(**read-only**, never write there)* — the generic Coworld
   packaging/runner/CLI contract Crewrift conforms to.
 
@@ -247,7 +247,7 @@ Social deduction, 8 players / 2 imposters default, retro pixel art.
 
 ### Loop, mechanics, scoring
 
-> **Citation key** (all paths under `Metta-AI/coworld-crewrift/`, verified
+> **Citation key** (all paths under `softmax-universe/coworld-crewrift/`, verified
 > 2026-06-10). Game source: `sim` = `src/crewrift/sim.nim`, `global` =
 > `src/crewrift/global.nim` (the `/player` renderer), `server` =
 > `src/crewrift/server.nim`, `protocol` = `src/crewrift/common/protocol.nim`.
@@ -568,18 +568,18 @@ pixel parity.
 | SDK framework reference (invariants) | `players/player_sdk/docs/metta_cogames_framework/README.md` |
 | SDK minimal example to mirror | `players/player_sdk/docs/metta_cogames_framework/examples/toy_grid_agent.py` |
 | Crewborg design decisions | `players/crewrift/crewborg/design.md` |
-| Crewrift Sprite-v1 parser (perception reference) | `Metta-AI/coworld-crewrift/players/notsus/notsus/protocols.nim` |
-| Crewrift rules / mechanics | `Metta-AI/coworld-crewrift/README.md`, `docs/rules.md`, `src/crewrift/sim.nim` |
-| Crewrift wire protocol | `Metta-AI/coworld-crewrift/docs/sprite_v1.md` |
-| Crewrift reference bots + guides | `Metta-AI/coworld-crewrift/players/` |
-| Coworld platform/runner contract | `Metta-AI/coworld: src/coworld/docs/README.md` + `runner/runner.py` *(read-only)* |
+| Crewrift Sprite-v1 parser (perception reference) | `softmax-universe/coworld-crewrift/players/notsus/notsus/protocols.nim` |
+| Crewrift rules / mechanics | `softmax-universe/coworld-crewrift/README.md`, `docs/rules.md`, `src/crewrift/sim.nim` |
+| Crewrift wire protocol | `softmax-universe/coworld-crewrift/docs/sprite_v1.md` |
+| Crewrift reference bots + guides | `softmax-universe/coworld-crewrift/players/` |
+| Coworld platform/runner contract | `softmax-universe/coworld: src/coworld/docs/README.md` + `runner/runner.py` *(read-only)* |
 | Fetch hosted episodes crewborg played | `players/crewrift/crewborg/scripts/fetch_episodes.py` (verify its routes against current CLI help and OpenAPI before use) |
 | View crewborg trace replays | `players/crewrift/crewborg/viewer/index.html` (load logs captured with `CREWBORG_TRACE=viewer` or `CREWBORG_TRACE=debug`) |
 
 Source locations:
-- Player SDK & this workspace: `players/` in `Metta-AI/coworld-tools` (pkg `players`)
-- Crewrift game source: `Metta-AI/coworld-crewrift`
-- Coworld platform: `Metta-AI/coworld`: `src/coworld` *(read-only reference)*
+- Player SDK & this workspace: `players/` in `softmax-universe/coworld-tools` (pkg `players`)
+- Crewrift game source: `softmax-universe/coworld-crewrift`
+- Coworld platform: `softmax-universe/coworld`: `src/coworld` *(read-only reference)*
 
 ## Source-of-truth & caveats
 
