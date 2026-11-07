@@ -80,10 +80,12 @@ finally:
     server.server_close()
 assert len(calls) == 2
 for path, headers, data in calls:
+    headers = {name.lower(): value for name, value in headers.items()}
     assert (
         path == "/v1/messages"
         and data["model"] == "anthropic/claude-sonnet-4.6"
         and "anthropic_version" not in data
     )
-    assert "Authorization" not in headers
+    assert "authorization" not in headers
+    assert "x-api-key" not in headers
 print("Two native copied player transports passed real HTTP")
