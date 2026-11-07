@@ -75,11 +75,39 @@ try:
         json.loads(_invoke_bedrock_messages(provider, "rules", "state"))["reason"]
         == "native"
     )
+    sys.path.insert(0, str(root / "players"))
+    from players.crewrift.crewborg.strategy.meeting.llm import (
+        AnthropicMeetingClient,
+        MeetingLLMConfig,
+    )
+    from players.player_sdk.llm import select_client
+
+    def call(client):
+        response = client.messages.create(
+            model="anthropic/claude-sonnet-4.6",
+            max_tokens=32,
+            messages=[{"role": "user", "content": "state"}],
+        )
+        client.close()
+        assert json.loads(response.content[0].text)["reason"] == "native"
+
+    call(select_client(use_bedrock=True, timeout=3))
+    call(
+        AnthropicMeetingClient(
+            MeetingLLMConfig(sidecar_endpoint=os.environ["COWORLD_LLM_ENDPOINT"])
+        )._anthropic_client()
+    )
+    sidecar_count = len(calls)
+    os.environ["ANTHROPIC_BASE_URL"] = os.environ.pop("COWORLD_LLM_ENDPOINT")
+    os.environ.pop("ANTHROPIC_AUTH_TOKEN", None)
+    call(select_client(use_bedrock=False, timeout=3))
+    call(AnthropicMeetingClient(MeetingLLMConfig())._anthropic_client())
 finally:
     server.shutdown()
     server.server_close()
-assert len(calls) == 2
-for path, headers, data in calls:
+assert sidecar_count == 4
+assert len(calls) == 6
+for path, headers, data in calls[:sidecar_count]:
     headers = {name.lower(): value for name, value in headers.items()}
     assert (
         path == "/v1/messages"
@@ -88,4 +116,11 @@ for path, headers, data in calls:
     )
     assert "authorization" not in headers
     assert "x-api-key" not in headers
-print("Two native copied player transports passed real HTTP")
+for path, headers, _ in calls[sidecar_count:]:
+    headers = {name.lower(): value for name, value in headers.items()}
+    assert path == "/v1/messages"
+    assert (
+        headers.get("x-api-key") == "wrong-key"
+        or headers.get("authorization") == "Bearer wrong-key"
+    )
+print("Native copied player transports and direct authentication passed real HTTP")
