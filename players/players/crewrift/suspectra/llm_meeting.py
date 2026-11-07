@@ -27,14 +27,18 @@ def decide(context: dict[str, Any]) -> dict[str, Any]:
     if not endpoint and not use_bedrock and not os.environ.get("ANTHROPIC_API_KEY"):
         return _fallback("ANTHROPIC_API_KEY is not set")
 
-    from anthropic import Anthropic, AnthropicBedrock
+    from anthropic import Anthropic, AnthropicBedrock, omit
 
     timeout = float(
         os.environ.get("SUSPECTRA_LLM_TIMEOUT_SECONDS", str(DEFAULT_TIMEOUT_SECONDS))
     )
     if endpoint:
         client = Anthropic(
-            base_url=endpoint, api_key="sidecar", timeout=timeout, max_retries=0
+            base_url=endpoint,
+            api_key="sidecar",
+            timeout=timeout,
+            max_retries=0,
+            default_headers={"Authorization": omit, "X-Api-Key": omit},
         )
         model = os.environ.get("COWORLD_LLM_MODEL", "anthropic/claude-haiku-4.5")
     elif use_bedrock:
