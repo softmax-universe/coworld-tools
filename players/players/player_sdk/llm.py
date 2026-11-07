@@ -69,9 +69,15 @@ def select_client(*, use_bedrock: bool, timeout: float) -> Any:
 
     endpoint = os.environ.get("COWORLD_LLM_ENDPOINT")
     if endpoint:
-        from anthropic import Anthropic
+        from anthropic import Anthropic, omit
 
-        return Anthropic(base_url=endpoint.rstrip("/"), api_key="sidecar", timeout=timeout, max_retries=0)
+        return Anthropic(
+            base_url=endpoint.rstrip("/"),
+            api_key="sidecar",
+            timeout=timeout,
+            max_retries=0,
+            default_headers={"Authorization": omit, "X-Api-Key": omit},
+        )
     if use_bedrock:
         try:
             # Keep the optional boto3-backed Bedrock client out of the SDK import path.

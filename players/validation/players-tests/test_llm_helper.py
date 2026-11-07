@@ -1,12 +1,10 @@
 from __future__ import annotations
 
 import builtins
+import types
 from typing import Any
 
 import pytest
-
-import types
-
 from players.player_sdk import (
     DEFAULT_BEDROCK_MODEL,
     DEFAULT_DIRECT_MODEL,
@@ -228,7 +226,13 @@ def test_hosted_client_and_model_override_local_configuration(monkeypatch):
     monkeypatch.setenv("COWORLD_LLM_MODEL", "anthropic/claude-sonnet-4.6")
     monkeypatch.setenv("AWS_ENDPOINT_URL_BEDROCK_RUNTIME", "http://retired.invalid")
     select_client(use_bedrock=True, timeout=2.0)
-    assert captured == {"base_url": "http://127.0.0.1:9100", "api_key": "sidecar", "timeout": 2.0, "max_retries": 0}
+    assert captured == {
+        "base_url": "http://127.0.0.1:9100",
+        "api_key": "sidecar",
+        "timeout": 2.0,
+        "max_retries": 0,
+        "default_headers": {"Authorization": anthropic.omit, "X-Api-Key": anthropic.omit},
+    }
     assert resolve_model(use_bedrock=True, direct_model="direct", bedrock_model="bedrock", explicit="local") == "anthropic/claude-sonnet-4.6"
 
 

@@ -11,12 +11,12 @@ from typing import Any, Protocol
 
 from pydantic import BaseModel, ConfigDict
 
-from players.player_sdk import ModeParams
 from players.crewrift.crewborg.strategy.meeting.prompts import build_system_prompt
 from players.crewrift.crewborg.strategy.meeting.schema import (
     VOTE_SKIP,
     MeetingDecision,
 )
+from players.player_sdk import ModeParams
 
 DEFAULT_MEETING_MODEL = "claude-haiku-4-5-20251001"
 # Bedrock addresses models by inference-profile ID rather than the bare model
@@ -90,10 +90,14 @@ class AnthropicMeetingClient:
         if self._client is not None:
             return self._client
         if self.config.sidecar_endpoint:
-            from anthropic import Anthropic
+            from anthropic import Anthropic, omit
+
             self._client = Anthropic(
-                base_url=self.config.sidecar_endpoint.rstrip("/"), api_key="sidecar",
-                timeout=self.config.timeout_seconds, max_retries=0,
+                base_url=self.config.sidecar_endpoint.rstrip("/"),
+                api_key="sidecar",
+                timeout=self.config.timeout_seconds,
+                max_retries=0,
+                default_headers={"Authorization": omit, "X-Api-Key": omit},
             )
         elif self.config.use_bedrock:
             # AnthropicBedrock authenticates through the standard AWS environment
