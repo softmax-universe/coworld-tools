@@ -44,4 +44,4 @@ omit = [
 ]
 
 [tool.uv.sources]
-mettagrid = {git = "https://github.com/Metta-AI/mettagrid.git"}
+mettagrid = {git = "https://github.com/softmax-universe/mettagrid.git"}

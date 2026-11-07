@@ -306,7 +306,7 @@ wheels = [
 [[package]]
 name = "cogames"
 version = "0.0.0"
-source = { git = "https://github.com/Metta-AI/cogames.git#cbd926ffd976ac5cd10c53b175cb7b1dbfbe06ac" }
+source = { git = "https://github.com/softmax-universe/cogames.git#cbd926ffd976ac5cd10c53b175cb7b1dbfbe06ac" }
 dependencies = [
     { name = "anthropic", extra = ["bedrock"] },
     { name = "httpx" },
@@ -357,9 +357,9 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "anthropic", marker = "extra == 'llm'", specifier = ">=0.64.0" },
-    { name = "cogames", git = "https://github.com/Metta-AI/cogames.git" },
+    { name = "cogames", git = "https://github.com/softmax-universe/cogames.git" },
     { name = "jinja2", specifier = ">=3.1" },
-    { name = "mettagrid", git = "https://github.com/Metta-AI/mettagrid.git" },
+    { name = "mettagrid", git = "https://github.com/softmax-universe/mettagrid.git" },
     { name = "pytest", marker = "extra == 'test'", specifier = ">=8.0" },
     { name = "typer", specifier = ">=0.12" },
 ]
@@ -1022,7 +1022,7 @@ wheels = [
 [[package]]
 name = "mettagrid"
 version = "0.0.0"
-source = { git = "https://github.com/Metta-AI/mettagrid.git#9aa2adcad5eb59f47869138fb27e8607e4b35ca0" }
+source = { git = "https://github.com/softmax-universe/mettagrid.git#9aa2adcad5eb59f47869138fb27e8607e4b35ca0" }
 dependencies = [
     { name = "boto3" },
     { name = "botocore" },

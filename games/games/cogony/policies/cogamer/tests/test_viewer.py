@@ -252,7 +252,7 @@ def test_render_includes_mettascope_iframe(tmp_path: Path) -> None:
     # JS prefers the locally-served mettascope path (fixes mixed-content).
     assert "./mettascope/mettascope.html" in html
     # Github-pages URL is still present as fallback.
-    assert "https://metta-ai.github.io/metta/mettascope/mettascope.html" in html
+    assert "https://softmax-universe.github.io/softmax/mettascope/mettascope.html" in html
     assert "./replay.json.z" in html
 
 
@@ -266,7 +266,7 @@ def test_render_iframe_prefers_local_mettascope_on_http(tmp_path: Path) -> None:
     # origin as the run folder), not jumping straight to the github URL.
     # Ensure the local path appears before the remote fallback in source.
     assert html.find("./mettascope/mettascope.html") < html.find(
-        "https://metta-ai.github.io/metta/mettascope/mettascope.html"
+        "https://softmax-universe.github.io/softmax/mettascope/mettascope.html"
     )
 
 
